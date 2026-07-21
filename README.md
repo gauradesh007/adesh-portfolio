@@ -1,43 +1,93 @@
-# Astro Starter Kit: Minimal
+# Adesh Digital Presence
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Official repository for the professional website of **Adesh Gaur**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Vision
 
-## 🚀 Project Structure
+Adesh Digital Presence is a professional platform that showcases enterprise integration architecture, Boomi expertise, healthcare integration experience, AI engineering, technical leadership, and original products.
 
-Inside of your Astro project, you'll see the following folders and files:
+The website is designed as a long-term professional platform rather than a traditional résumé website.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Live Website
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Coming Soon
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+https://adesh.gaurcloud.com
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Primary Objectives
 
-## 🧞 Commands
+- Establish a professional technical brand
+- Showcase enterprise architecture work
+- Highlight Boomi expertise
+- Demonstrate AI engineering capability
+- Publish technical articles and thought leadership
+- Present products and technical solutions
+- Provide a professional contact experience
 
-All commands are run from the root of the project, from a terminal:
+## Technology Stack
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Astro
+- TypeScript
+- Cloudflare Pages
+- Cloudflare DNS
+- Cloudflare Email Routing
 
-## 👀 Want to learn more?
+## Development Environment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Runtime
+
+- Node.js LTS
+- Astro
+
+Package Manager
+
+- npm
+
+This project does not require Python or a Python virtual environment.
+
+## Current Status
+
+Version: 0.1.0
+
+Status:
+
+Planning
+
+## Repository Structure
+
+docs/
+Product documentation
+
+src/
+Website source
+
+public/
+Static assets
+
+assets/
+Branding and screenshots
+
+## Roadmap
+
+Sprint 1
+
+- Product vision
+- Information architecture
+- Design system
+- Homepage
+
+Sprint 2
+
+- Products
+- Experience
+- Certifications
+
+Sprint 3
+
+- Contact
+- Resume request workflow
+- Deployment
+
+## License
+
+Copyright © Adesh Gaur
