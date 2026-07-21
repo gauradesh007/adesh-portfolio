@@ -1,0 +1,150 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navigation = [
+  { href: "/", label: "Home" },
+  { href: "/boomi", label: "Boomi" },
+  { href: "/healthcare", label: "Healthcare" },
+  { href: "/products", label: "Products" },
+  { href: "/journey", label: "Journey" },
+  { href: "/credentials", label: "Credentials" },
+  { href: "/contact", label: "Contact" },
+];
+
+const isActiveRoute = (href: string) => {
+  if (href === "/") {
+    return currentPath === "/";
+  }
+
+  return currentPath === href || currentPath.startsWith(`${href}/`);
+};
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-brand" href="/" aria-label="Adesh Gaur homepage">
+      <span class="brand-name">Adesh Gaur</span>
+      <span class="brand-title">Enterprise Integration Architect</span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      {
+        navigation.map((item) => (
+          <a
+            href={item.href}
+            class:list={{ active: isActiveRoute(item.href) }}
+            aria-current={isActiveRoute(item.href) ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(204, 216, 230, 0.86);
+    background: rgba(248, 250, 252, 0.92);
+    box-shadow: 0 1px 0 rgba(20, 32, 51, 0.02);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .primary-nav {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    margin-left: auto;
+    font-size: 0.93rem;
+    font-weight: 700;
+  }
+
+  .primary-nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--color-text-body);
+    white-space: nowrap;
+    transition: color 160ms ease;
+  }
+
+  .primary-nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0.35rem;
+    left: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--color-primary);
+    content: "";
+    opacity: 0;
+    transform: scaleX(0.45);
+    transition:
+      opacity 160ms ease,
+      transform 160ms ease;
+  }
+
+  .primary-nav a:hover,
+  .primary-nav a.active {
+    color: var(--color-primary);
+  }
+
+  .primary-nav a:hover::after,
+  .primary-nav a.active::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  @media (max-width: 940px) {
+    .header-inner {
+      min-height: auto;
+      padding-top: 0.85rem;
+      padding-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.7rem 1.5rem;
+    }
+
+    .site-brand {
+      flex-shrink: 0;
+    }
+
+    .primary-nav {
+      width: 100%;
+      margin-left: 0;
+      padding-bottom: 0.1rem;
+      gap: 1.1rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .primary-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .primary-nav a {
+      min-height: 2.4rem;
+      font-size: 0.88rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .header-inner {
+      padding-top: 0.75rem;
+      padding-bottom: 0.55rem;
+    }
+
+    .primary-nav {
+      gap: 1rem;
+    }
+
+    .primary-nav a {
+      font-size: 0.84rem;
+    }
+  }
+</style>
