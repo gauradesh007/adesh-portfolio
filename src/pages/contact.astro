@@ -1,0 +1,357 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact | Adesh Gaur"
+  description="Contact Adesh Gaur to discuss Enterprise Integration, Boomi architecture, Healthcare Integration and EDI, enterprise APIs, technical leadership, and AI-powered solutions."
+>
+  <main>
+    <section class="page-hero contact-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-content">
+          <p class="eyebrow">Professional Contact</p>
+
+          <h1>Let&rsquo;s discuss enterprise integration.</h1>
+
+          <p class="hero-lead">
+            Connect with me about Boomi architecture, Healthcare Integration
+            &amp; EDI, APIs, modernization, technical leadership, or AI-powered
+            enterprise solutions.
+          </p>
+
+          <p class="hero-copy">
+            Share a brief description of your opportunity, architecture
+            challenge, collaboration idea, or request for my professional CV.
+            I will respond using the contact information you provide.
+          </p>
+        </div>
+
+        <aside class="contact-options" aria-labelledby="contact-options-title">
+          <p id="contact-options-title" class="panel-label">
+            Contact Options
+          </p>
+
+          <ul>
+            <li>
+              <span class="marker" aria-hidden="true">01</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:adesh@gaurcloud.com">
+                  adesh@gaurcloud.com
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <span class="marker" aria-hidden="true">02</span>
+              <div>
+                <strong>LinkedIn</strong>
+                <a
+                  href="https://www.linkedin.com/in/adesh-gaur/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Professional profile
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <span class="marker" aria-hidden="true">03</span>
+              <div>
+                <strong>GitHub</strong>
+                <a
+                  href="https://github.com/gauradesh007"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Technical repositories
+                </a>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container contact-layout">
+        <div>
+          <p class="eyebrow">Send a Message</p>
+
+          <h2>Tell me what you would like to discuss.</h2>
+
+          <p class="section-intro">
+            The form is currently a wireframe. We will connect it to Cloudflare
+            Pages Functions after the visual pages are complete.
+          </p>
+
+          <form class="contact-form">
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                />
+              </label>
+            </div>
+
+            <label>
+              <span>Topic</span>
+              <select name="topic">
+                <option value="">Select a topic</option>
+                <option value="integration">Enterprise Integration</option>
+                <option value="boomi">Boomi Architecture</option>
+                <option value="healthcare">Healthcare Integration &amp; EDI</option>
+                <option value="products">Products &amp; AI Solutions</option>
+                <option value="cv">Request CV</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea
+                name="message"
+                rows="7"
+                placeholder="Tell me briefly about your request..."
+              ></textarea>
+            </label>
+
+            <button class="button button-primary" type="button">
+              Send Message
+            </button>
+
+            <p class="form-note">
+              Form submission will be enabled during the Cloudflare deployment
+              phase.
+            </p>
+          </form>
+        </div>
+
+        <aside class="contact-guidance">
+          <p class="panel-label">Useful Information</p>
+
+          <div>
+            <h3>Professional Opportunities</h3>
+            <p>
+              Include the role, project context, location or remote expectations,
+              and the primary technologies involved.
+            </p>
+          </div>
+
+          <div>
+            <h3>Architecture Discussions</h3>
+            <p>
+              Briefly describe the integration landscape, business challenge,
+              platforms, and desired outcome.
+            </p>
+          </div>
+
+          <div>
+            <h3>Requesting My CV</h3>
+            <p>
+              Mention the opportunity or reason for the request so I can share
+              the most relevant and current version.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .contact-hero {
+    padding: 6rem 0 5rem;
+    background:
+      radial-gradient(
+        circle at 86% 12%,
+        rgba(22, 95, 184, 0.12),
+        transparent 31rem
+      ),
+      linear-gradient(180deg, #ffffff, #f4f8fc);
+  }
+
+  .contact-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.72fr);
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-hero h1 {
+    max-width: 13ch;
+    margin: 0.75rem 0 1.25rem;
+    font-size: clamp(3rem, 5.4vw, 5rem);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-lead {
+    max-width: 44rem;
+    color: var(--color-text);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 650;
+  }
+
+  .hero-copy {
+    max-width: 48rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .contact-options,
+  .contact-guidance {
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-options ul {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact-options li {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .contact-options li:last-child {
+    border-bottom: 0;
+  }
+
+  .contact-options li > div {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .contact-options a,
+  .contact-guidance a {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.7fr);
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 1.25rem;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .contact-form label {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .contact-form label > span {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+    color: var(--color-text);
+  }
+
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    border-color: var(--color-primary);
+    outline: 3px solid rgba(22, 95, 184, 0.12);
+  }
+
+  .contact-form .button {
+    justify-self: start;
+  }
+
+  .form-note {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  .contact-guidance {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .contact-guidance div {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .contact-guidance div:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .contact-guidance h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-guidance p {
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .contact-hero-grid,
+    .contact-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+      padding: 1.25rem;
+    }
+  }
+</style>

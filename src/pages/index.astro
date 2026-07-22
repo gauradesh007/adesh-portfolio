@@ -70,10 +70,10 @@ import Hero from "../components/Hero.astro";
         </div>
 
         <div class="section-actions">
-          <a href="/boomi" class="button button-primary">
-            Explore Boomi Expertise
-          </a>
-        </div>
+        <a class="button button-primary" href="/boomi">
+          Explore Boomi Expertise
+        </a>
+      </div>
       </div>
     </section>
 
@@ -305,8 +305,8 @@ import Hero from "../components/Hero.astro";
 
     <!-- Professional Journey -->
     <section id="journey" class="section section-muted">
-      <div class="container journey-layout">
-        <div class="journey-intro">
+      <div class="container">
+        <div class="section-heading">
           <p class="eyebrow">Professional Journey</p>
 
           <h2>
@@ -314,72 +314,73 @@ import Hero from "../components/Hero.astro";
             leadership.
           </h2>
 
-          <p>
-            My professional journey has evolved from Java and database
-            engineering into enterprise integration architecture, Boomi
-            leadership, healthcare interoperability, APIs, and practical AI
-            engineering.
+          <p class="section-intro">
+            My professional journey has evolved from Java and database engineering
+            into enterprise integration architecture, Boomi leadership, healthcare
+            interoperability, APIs, and practical AI engineering.
           </p>
-
-          <a class="text-link" href="/journey">
-            Explore my professional journey
-            <span aria-hidden="true">→</span>
-          </a>
         </div>
 
-        <div class="journey-steps">
-          <article>
-            <span class="marker" aria-hidden="true">01</span>
-
-            <div>
+        <div class="journey-preview-grid">
+          <article class="card journey-preview-card">
+            <div class="card-heading">
+              <span class="marker" aria-hidden="true">01</span>
               <h3>Enterprise Engineering Foundation</h3>
-              <p>
-                Java, databases, SQL, application integration, and enterprise
-                software engineering.
-              </p>
             </div>
+
+            <p>
+              Java, databases, SQL, application integration, and enterprise
+              software engineering established the technical foundation of my
+              career.
+            </p>
           </article>
 
-          <article>
-            <span class="marker" aria-hidden="true">02</span>
-
-            <div>
+          <article class="card journey-preview-card">
+            <div class="card-heading">
+              <span class="marker" aria-hidden="true">02</span>
               <h3>Integration Architecture</h3>
-              <p>
-                Middleware architecture, reusable integration patterns, APIs,
-                data transformation, and operational reliability.
-              </p>
             </div>
+
+            <p>
+              Middleware architecture, reusable integration patterns, APIs, data
+              transformation, Boomi delivery, and operational reliability.
+            </p>
           </article>
 
-          <article>
-            <span class="marker" aria-hidden="true">03</span>
-
-            <div>
+          <article class="card journey-preview-card">
+            <div class="card-heading">
+              <span class="marker" aria-hidden="true">03</span>
               <h3>Healthcare Integration &amp; EDI</h3>
-              <p>
-                Healthcare payer integration, HIPAA X12 transactions,
-                validation, routing, reconciliation, and production support.
-              </p>
             </div>
+
+            <p>
+              Healthcare payer integration, HIPAA X12 transactions, validation,
+              routing, reconciliation, interoperability, and production support.
+            </p>
           </article>
 
-          <article>
-            <span class="marker" aria-hidden="true">04</span>
-
-            <div>
+          <article class="card journey-preview-card">
+            <div class="card-heading">
+              <span class="marker" aria-hidden="true">04</span>
               <h3>AI-powered Enterprise Solutions</h3>
-              <p>
-                Agentic AI, RAG, local models, deterministic tools, and
-                enterprise integration intelligence.
-              </p>
             </div>
+
+            <p>
+              Agentic AI, RAG, local models, deterministic engineering tools, and
+              intelligent automation for enterprise integration challenges.
+            </p>
           </article>
+        </div>
+
+        <div class="section-actions">
+          <a class="button button-primary" href="/journey">
+            Explore My Professional Journey
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Verified Credentials -->
+        <!-- Verified Credentials -->
     <section id="credentials" class="section">
       <div class="container">
         <div class="section-heading">
@@ -582,54 +583,23 @@ import Hero from "../components/Hero.astro";
     color: #6842b8;
   }
 
-  .journey-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: 4rem;
-    align-items: start;
+  .journey-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
   }
 
-  .journey-intro {
-    position: sticky;
-    top: 6rem;
+  .journey-preview-card {
+  min-width: 0;
   }
 
-  .journey-intro p {
-    line-height: 1.8;
+  .journey-preview-card p {
+  margin: 0;
+  color: var(--color-text-body);
+  line-height: 1.7;
   }
 
-  .journey-steps {
-    display: grid;
-  }
-
-  .journey-steps article {
-    display: grid;
-    grid-template-columns: 2.5rem minmax(0, 1fr);
-    gap: 1rem;
-    align-items: start;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .journey-steps article:first-child {
-    padding-top: 0;
-  }
-
-  .journey-steps article:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
-
-  .journey-steps h3 {
-    margin: 0 0 0.5rem;
-  }
-
-  .journey-steps p {
-    margin: 0;
-    line-height: 1.7;
-  }
-
-  .credential-grid {
+.credential-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
@@ -654,19 +624,14 @@ import Hero from "../components/Hero.astro";
     text-transform: uppercase;
   }
 
-  @media (max-width: 900px) {
+    @media (max-width: 900px) {
     .product-grid,
     .credential-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .journey-layout {
+    .journey-preview-grid {
       grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .journey-intro {
-      position: static;
     }
   }
 
