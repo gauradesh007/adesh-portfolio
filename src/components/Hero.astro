@@ -2,21 +2,20 @@
   <div class="container hero-grid">
     <!-- Left column -->
     <div class="hero-content">
-      <p class="eyebrow">
-        Enterprise Integration • Boomi • Healthcare • AI
-      </p>
-
+      
       <p class="person-name">Adesh Gaur</p>
 
       <h1>Enterprise Integration Architect</h1>
+      <p class="specialization-label"> Specializing in </p>
+
 
       <p class="specialization">
         Boomi
-        <span aria-hidden="true">•</span>
+        <span>•</span>
         Healthcare Integration &amp; EDI
-        <span aria-hidden="true">•</span>
+        <span>•</span>
         Enterprise APIs
-        <span aria-hidden="true">•</span>
+        <span>•</span>
         AI-powered Solutions
       </p>
 
@@ -154,17 +153,45 @@
   }
 
   .person-name {
-    margin: 1.15rem 0 0.2rem;
-    color: var(--color-text);
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-  }
+      margin: 0 0 0.3rem;
+      color: #0f2240;        /* Darkest color */
+      font-size: 5.2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.5;
+    }
+
+    .specialization-label {
+      margin: 0 0 0.5rem;
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .specialization {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 0 0 1.75rem;
+      color: var(--color-text);
+      font-size: 1rem;
+      font-weight: 700;
+    }
 
   .hero h1 {
-    max-width: 760px;
-    margin-bottom: 1rem;
-  }
+      max-width: 760px;
+      margin: 0 0 1rem;
+
+      font-size: clamp(1.4rem, 3vw, 1.7rem);
+      font-weight: 600;
+
+      color: #243b63;   /* <-- slightly lighter than the name */
+
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
 
   .specialization {
     display: flex;
