@@ -26,9 +26,14 @@ const web3FormsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
             challenge, collaboration idea, or request for my professional CV.
             I will respond using the contact information you provide.
           </p>
+
+          <p class="hero-location">
+            Based in Miami, Florida, USA, delivering enterprise integration solutions for global organizations.
+          </p>
         </div>
 
-        <aside class="contact-options" aria-labelledby="contact-options-title">
+        
+        <aside class="page-summary-panel contact-options" aria-labelledby="contact-options-title" >
           <p id="contact-options-title" class="panel-label">
             Contact Options
           </p>
@@ -71,6 +76,23 @@ const web3FormsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
                 </a>
               </div>
             </li>
+
+            <li>
+              <span class="marker" aria-hidden="true">04</span>
+              <div>
+                <strong>Location</strong>
+                 <small>
+                  <span class="location-value">
+                    Miami, Florida, USA
+                  </span>
+
+                  <span class="location-timezone">
+                    • Eastern Time (ET)
+                  </span>
+                </small>
+              </div>
+            </li>
+
           </ul>
         </aside>
       </div>
@@ -193,7 +215,7 @@ const web3FormsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
           <p class="panel-label">Useful Information</p>
 
           <div>
-            <h3>Professional Opportunities</h3>
+            <h3>Professional Inquiries</h3>
             <p>
               Include the role, project context, location or remote expectations,
               and the primary technologies involved.
@@ -292,6 +314,15 @@ const web3FormsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
 </BaseLayout>
 
 <style>
+
+  .panel-label {
+    margin: 0 0 1.25rem;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
   .contact-hero {
     padding: 6rem 0 5rem;
     background:
@@ -425,12 +456,6 @@ const web3FormsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
     justify-self: start;
   }
 
-  .form-note {
-    margin: 0;
-    color: var(--color-text-muted);
-    font-size: 0.85rem;
-  }
-
   .contact-guidance {
     display: grid;
     gap: 1.5rem;
@@ -473,7 +498,7 @@ const web3FormsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
 
   .form-status {
   min-height: 1.5rem;
-  margin: 0;
+  margin-top: .5rem;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -498,4 +523,28 @@ const web3FormsAccessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
   height: 1px;
   overflow: hidden;
 }
+
+.hero-location {
+  max-width: 48rem;
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.location-value{
+    color:var(--color-text);
+    font-weight:600;
+}
+
+.location-timezone{
+    color:var(--color-text-muted);
+}
+
+.contact-options small {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+
 </style>
