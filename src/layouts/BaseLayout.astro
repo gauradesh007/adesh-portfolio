@@ -79,32 +79,50 @@ const structuredData = {
     <meta name="color-scheme" content="light" />
 
     <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
 
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
 
-        <link
-          rel="icon"
-          type="image/svg+xml"
-          href="/favicon.svg"
-        />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicon-96x96.png"
+    />
 
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="96x96"
-          href="/favicon-96x96.png"
-        />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
 
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
+    <link
+      rel="manifest"
+      href="/site.webmanifest"
+    />
 
-        <link
-          rel="manifest"
-          href="/site.webmanifest"
-        />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.author} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:image" content={socialImageUrl.href} />
+    <meta
+      property="og:image:secure_url"
+      content={socialImageUrl.href}
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Adesh Gaur, Enterprise Integration Architect"
+    />
 
     <!-- Twitter / X -->
     <meta
