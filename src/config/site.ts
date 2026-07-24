@@ -3,12 +3,13 @@ export const SITE = {
 
   description:
   "Enterprise Integration Architect specializing in Boomi, Healthcare Integration & EDI, Enterprise APIs, and AI-powered solutions.",
+  
 
   url: "https://adesh.gaurcloud.com",
 
   author: "Adesh Gaur",
 
-  image: "/images/og-image.png",
+  image: "/images/og-image.jpg",
 
   keywords: [
     "Enterprise Integration Architect",
