@@ -8,7 +8,7 @@ export const SITE = {
 
   author: "Adesh Gaur",
 
-  image: "/images/og-image.jpg",
+  image: "/images/og-image.png",
 
   keywords: [
     "Enterprise Integration Architect",

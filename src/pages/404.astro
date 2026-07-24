@@ -1,0 +1,214 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page Not Found | Adesh Gaur"
+  description="The page you requested could not be found on Adesh Gaur's enterprise integration portfolio."
+  noindex={true}
+>
+  <main>
+    <section class="not-found">
+      <div class="container not-found-inner">
+        <div class="not-found-content">
+          <p class="eyebrow">Error 404</p>
+
+          <h1>The page you&rsquo;re looking for doesn&rsquo;t exist.</h1>
+
+          <p class="not-found-lead">
+            The address may be incorrect, or the page may have been moved.
+            Use one of the options below to continue exploring the site.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="/">
+              Return Home
+            </a>
+
+            <a class="button button-secondary" href="/contact">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <aside class="not-found-panel" aria-labelledby="helpful-links-title">
+          <p id="helpful-links-title" class="panel-label">
+            Helpful Links
+          </p>
+
+          <ul>
+            <li>
+              <span class="marker" aria-hidden="true">01</span>
+
+              <div>
+                <strong>Boomi Expertise</strong>
+                <a href="/boomi">Explore Boomi architecture</a>
+              </div>
+            </li>
+
+            <li>
+              <span class="marker" aria-hidden="true">02</span>
+
+              <div>
+                <strong>Healthcare Integration</strong>
+                <a href="/healthcare">Explore Healthcare &amp; EDI</a>
+              </div>
+            </li>
+
+            <li>
+              <span class="marker" aria-hidden="true">03</span>
+
+              <div>
+                <strong>Products</strong>
+                <a href="/products">View enterprise AI products</a>
+              </div>
+            </li>
+
+            <li>
+              <span class="marker" aria-hidden="true">04</span>
+
+              <div>
+                <strong>Professional Journey</strong>
+                <a href="/journey">View my experience</a>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found {
+    display: grid;
+    min-height: calc(100vh - 10rem);
+    place-items: center;
+    padding: 5rem 0;
+    background:
+      radial-gradient(
+        circle at 85% 15%,
+        rgba(22, 95, 184, 0.12),
+        transparent 32rem
+      ),
+      linear-gradient(180deg, #ffffff, #f4f8fc);
+  }
+
+  .not-found-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 22rem;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .not-found-content h1 {
+    max-width: 14ch;
+    margin: 0.75rem 0 1.25rem;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+  }
+
+  .not-found-lead {
+    max-width: 44rem;
+    margin: 0 0 2rem;
+    color: var(--color-text-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .not-found-panel {
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--shadow-md);
+  }
+
+  .panel-label {
+    margin: 0 0 1.25rem;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .not-found-panel ul {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .not-found-panel li {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .not-found-panel li:first-child {
+    padding-top: 0;
+  }
+
+  .not-found-panel li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .not-found-panel li > div {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .not-found-panel a {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .not-found-panel a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .not-found {
+      min-height: auto;
+      padding: 4rem 0;
+    }
+
+    .not-found-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .not-found-panel {
+      max-width: 42rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .not-found {
+      padding: 3.5rem 0;
+    }
+
+    .not-found-content h1 {
+      font-size: clamp(2.65rem, 13vw, 4rem);
+    }
+
+    .not-found-panel {
+      padding: 1.3rem;
+    }
+
+    .button-row {
+      align-items: stretch;
+    }
+
+    .button-row .button {
+      width: 100%;
+    }
+  }
+</style>
