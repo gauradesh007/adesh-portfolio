@@ -10,7 +10,7 @@ export const SITE = {
 
   image: "/images/og-image.jpg",
 
-   integrations: {
+  integrations: {
     googleAnalyticsMeasurementId: "G-0ZNTL3L007",
   },
 
